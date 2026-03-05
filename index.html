@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #005a9e, #0078d7, #106ebe);
             min-height: 100vh;
@@ -24,7 +25,7 @@
             color: #333;
             overflow-x: hidden;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1000px;
@@ -33,7 +34,7 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             overflow: hidden;
         }
-        
+
         header {
             background: linear-gradient(90deg, #0078d7, #106ebe);
             color: white;
@@ -42,7 +43,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -50,17 +51,17 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
             transform: rotate(30deg);
         }
-        
+
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
             position: relative;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         header p {
             font-size: 1.2rem;
             opacity: 0.9;
@@ -68,27 +69,27 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         .main-content {
             padding: 30px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
         }
-        
+
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         .control-panel {
             background: #f8f9fa;
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
-        
+
         .panel-title {
             display: flex;
             align-items: center;
@@ -98,16 +99,16 @@
             padding-bottom: 15px;
             border-bottom: 2px solid #e0e6ed;
         }
-        
+
         .panel-title i {
             font-size: 1.4rem;
             color: #0078d7;
         }
-        
+
         .form-group {
             margin-bottom: 22px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -118,8 +119,8 @@
             align-items: center;
             gap: 8px;
         }
-        
-        input[type="text"], 
+
+        input[type="text"],
         input[type="number"],
         select {
             width: 100%;
@@ -130,20 +131,21 @@
             transition: all 0.3s;
             background: white;
         }
-        
-        input:focus, select:focus {
+
+        input:focus,
+        select:focus {
             border-color: #0078d7;
             outline: none;
             box-shadow: 0 0 0 3px rgba(0, 120, 215, 0.2);
         }
-        
+
         .range-container {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-top: 5px;
         }
-        
+
         .range-value {
             min-width: 40px;
             text-align: center;
@@ -151,13 +153,13 @@
             color: #0078d7;
             font-size: 1.1rem;
         }
-        
+
         .button-group {
             display: flex;
             gap: 15px;
             margin-top: 30px;
         }
-        
+
         button {
             flex: 1;
             padding: 16px;
@@ -172,57 +174,57 @@
             justify-content: center;
             gap: 8px;
         }
-        
+
         #startBtn {
             background: linear-gradient(90deg, #107c10, #107c10);
             color: white;
             box-shadow: 0 4px 10px rgba(16, 124, 16, 0.3);
         }
-        
+
         #startBtn:hover {
             background: linear-gradient(90deg, #0e6a0e, #0e6a0e);
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(16, 124, 16, 0.4);
         }
-        
+
         #stopBtn {
             background: linear-gradient(90deg, #d83b01, #d83b01);
             color: white;
             box-shadow: 0 4px 10px rgba(216, 59, 1, 0.3);
         }
-        
+
         #stopBtn:hover {
             background: linear-gradient(90deg, #b73201, #b73201);
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(216, 59, 1, 0.4);
         }
-        
+
         #resetBtn {
             background: linear-gradient(90deg, #0078d7, #0078d7);
             color: white;
             box-shadow: 0 4px 10px rgba(0, 120, 215, 0.3);
         }
-        
+
         #resetBtn:hover {
             background: linear-gradient(90deg, #0066b8, #0066b8);
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(0, 120, 215, 0.4);
         }
-        
+
         .status-panel {
             background: #f8f9fa;
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
-        
+
         .status-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 18px;
             margin-bottom: 25px;
         }
-        
+
         .stat-box {
             background: white;
             border-radius: 12px;
@@ -231,25 +233,25 @@
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
             transition: transform 0.3s;
         }
-        
+
         .stat-box:hover {
             transform: translateY(-5px);
         }
-        
+
         .stat-value {
             font-size: 2.4rem;
             font-weight: 700;
             color: #0078d7;
             margin: 10px 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .stat-label {
             font-size: 1rem;
             color: #5a6a7f;
             font-weight: 500;
         }
-        
+
         .log-container {
             background: white;
             border-radius: 12px;
@@ -258,13 +260,13 @@
             overflow-y: auto;
             box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.08);
         }
-        
+
         .log-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
         }
-        
+
         .log-entry {
             padding: 10px 0;
             border-bottom: 1px solid #eee;
@@ -274,23 +276,23 @@
             align-items: flex-start;
             gap: 10px;
         }
-        
+
         .log-entry:last-child {
             border-bottom: none;
         }
-        
+
         .log-icon {
             color: #0078d7;
             font-size: 0.9rem;
             margin-top: 3px;
         }
-        
+
         .log-timestamp {
             color: #7f8c9a;
             font-size: 0.85rem;
             min-width: 70px;
         }
-        
+
         .progress-container {
             background: white;
             border-radius: 12px;
@@ -298,7 +300,7 @@
             margin-top: 20px;
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
         }
-        
+
         .progress-header {
             display: flex;
             justify-content: space-between;
@@ -306,7 +308,7 @@
             font-weight: 600;
             color: #2c3e50;
         }
-        
+
         .progress-bar {
             height: 22px;
             background: #e0e6ed;
@@ -314,7 +316,7 @@
             overflow: hidden;
             position: relative;
         }
-        
+
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #0078d7, #106ebe);
@@ -322,7 +324,7 @@
             width: 0%;
             transition: width 0.5s ease;
         }
-        
+
         .progress-text {
             position: absolute;
             top: 50%;
@@ -331,9 +333,9 @@
             color: white;
             font-weight: 600;
             font-size: 0.9rem;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
-        
+
         .disclaimer {
             margin-top: 25px;
             padding: 18px;
@@ -344,11 +346,11 @@
             color: #7d6608;
             grid-column: 1 / -1;
         }
-        
+
         .disclaimer strong {
             color: #d35400;
         }
-        
+
         .next-search {
             background: #e3f2fd;
             border-radius: 10px;
@@ -359,19 +361,19 @@
             gap: 10px;
             font-weight: 500;
         }
-        
+
         .next-search i {
             color: #0078d7;
             font-size: 1.2rem;
         }
-        
+
         .window-animation {
             display: flex;
             justify-content: center;
             margin-top: 15px;
             gap: 10px;
         }
-        
+
         .window {
             width: 50px;
             height: 40px;
@@ -383,7 +385,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .window::before {
             content: "";
             position: absolute;
@@ -394,12 +396,12 @@
             background: rgba(255, 255, 255, 0.3);
             border-radius: 4px;
         }
-        
+
         .window.active {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         .points-info {
             background: #e3f2fd;
             border-radius: 10px;
@@ -410,13 +412,13 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        
+
         @media (max-width: 600px) {
             .points-info {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         .points-info h3 {
             color: #0078d7;
             margin-bottom: 15px;
@@ -424,28 +426,28 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .points-info ul {
             padding-left: 20px;
         }
-        
+
         .points-info li {
             margin-bottom: 10px;
             line-height: 1.5;
         }
-        
+
         .points-info .important {
             color: #d83b01;
             font-weight: 600;
         }
-        
+
         .points-tracker {
             background: white;
             border-radius: 10px;
             padding: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .points-display {
             display: flex;
             justify-content: center;
@@ -453,7 +455,7 @@
             gap: 10px;
             margin: 15px 0;
         }
-        
+
         .points-value {
             font-size: 2.5rem;
             font-weight: 700;
@@ -461,12 +463,12 @@
             min-width: 80px;
             text-align: center;
         }
-        
+
         .points-label {
             font-size: 1rem;
             color: #5a6a7f;
         }
-        
+
         .points-progress {
             height: 10px;
             background: #e0e6ed;
@@ -474,20 +476,20 @@
             overflow: hidden;
             margin: 10px 0;
         }
-        
+
         .points-progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #107c10, #96c93d);
             width: 65%;
             border-radius: 5px;
         }
-        
+
         .points-goal {
             text-align: center;
             font-size: 0.9rem;
             color: #5a6a7f;
         }
-        
+
         .mouse-simulator {
             position: absolute;
             width: 20px;
@@ -501,22 +503,23 @@
         }
     </style>
 </head>
+
 <body>
     <div class="mouse-simulator" id="mousePointer"></div>
-    
+
     <div class="container">
         <header>
             <h1><i class="fas fa-bing"></i> Bing Rewards Auto-Search</h1>
             <p>Optimized solution to earn Microsoft Rewards points reliably</p>
         </header>
-        
+
         <div class="main-content">
             <div class="control-panel">
                 <div class="panel-title">
                     <i class="fas fa-cogs"></i>
                     <h2>Search Configuration</h2>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="searchCount"><i class="fas fa-sync-alt"></i> Number of Searches</label>
                     <div class="range-container">
@@ -524,15 +527,16 @@
                         <span class="range-value" id="searchCountValue">30</span>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="searchDelay"><i class="fas fa-hourglass-half"></i> Delay Between Searches (seconds)</label>
+                    <label for="searchDelay"><i class="fas fa-hourglass-half"></i> Delay Between Searches
+                        (seconds)</label>
                     <div class="range-container">
                         <input type="range" id="searchDelay" min="1" max="120" value="1">
                         <span class="range-value" id="searchDelayValue">10</span>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="windowCloseTime"><i class="fas fa-window-close"></i> Window Close Time (seconds)</label>
                     <div class="range-container">
@@ -540,7 +544,7 @@
                         <span class="range-value" id="windowCloseTimeValue">60</span>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="humanLike"><i class="fas fa-user"></i> Human-like Behavior</label>
                     <select id="humanLike">
@@ -549,47 +553,47 @@
                         <option value="high">High (More realistic)</option>
                     </select>
                 </div>
-                
+
                 <div class="button-group">
                     <button id="startBtn"><i class="fas fa-play"></i> Start</button>
                     <button id="stopBtn"><i class="fas fa-stop"></i> Stop</button>
                     <button id="resetBtn"><i class="fas fa-redo"></i> Reset</button>
                 </div>
             </div>
-            
+
             <div class="status-panel">
                 <div class="panel-title">
                     <i class="fas fa-chart-line"></i>
                     <h2>Search Status</h2>
                 </div>
-                
+
                 <div class="status-content">
                     <div class="stat-box">
                         <div class="stat-label">Total Searches</div>
                         <div class="stat-value" id="totalSearches">0</div>
                     </div>
-                    
+
                     <div class="stat-box">
                         <div class="stat-label">Completed</div>
                         <div class="stat-value" id="completedSearches">0</div>
                     </div>
-                    
+
                     <div class="stat-box">
                         <div class="stat-label">Active Windows</div>
                         <div class="stat-value" id="activeWindows">0</div>
                     </div>
-                    
+
                     <div class="stat-box">
                         <div class="stat-label">Time Left</div>
                         <div class="stat-value" id="timeRemaining">0s</div>
                     </div>
                 </div>
-                
+
                 <div class="next-search">
                     <i class="fas fa-arrow-right"></i>
                     <span>Next search: <span id="nextSearchTerm">Ready to start</span></span>
                 </div>
-                
+
                 <div class="progress-container">
                     <div class="progress-header">
                         <span>Progress</span>
@@ -600,14 +604,14 @@
                         <div class="progress-text" id="progressText">0%</div>
                     </div>
                 </div>
-                
+
                 <div class="window-animation">
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
                 </div>
             </div>
-            
+
             <div class="log-container">
                 <div class="log-header">
                     <h3><i class="fas fa-list-alt"></i> Activity Log</h3>
@@ -626,7 +630,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="points-info">
                 <div class="points-tips">
                     <h3><i class="fas fa-star"></i> Bing Points Optimization</h3>
@@ -640,7 +644,7 @@
                         <li><span class="important">Daily Limit:</span> Max 150 points from searches</li>
                     </ul>
                 </div>
-                
+
                 <div class="points-tracker">
                     <h3><i class="fas fa-trophy"></i> Points Tracker</h3>
                     <div class="points-display">
@@ -653,25 +657,27 @@
                     <div class="points-goal">Daily Goal: 150 points</div>
                 </div>
             </div>
-            
+
             <div class="disclaimer">
-                <strong>Note:</strong> This tool is designed for legitimate Microsoft Rewards users. It simulates human behavior to comply with Bing's terms. For best results, run during daytime hours and avoid excessive automation. Microsoft Rewards program rules apply.
+                <strong>Note:</strong> This tool is designed for legitimate Microsoft Rewards users. It simulates human
+                behavior to comply with Bing's terms. For best results, run during daytime hours and avoid excessive
+                automation. Microsoft Rewards program rules apply.
             </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Enhanced database of natural search phrases
             const searchPhrases = [
-                "latest technology news", "weather forecast this week", "healthy dinner recipes", 
+                "latest technology news", "weather forecast this week", "healthy dinner recipes",
                 "best travel destinations 2023", "how to improve productivity", "learn programming online",
                 "home workout routines", "stock market trends today", "new movie releases this month",
                 "sustainable living tips", "digital photography techniques", "mental health resources",
                 "online learning platforms", "budget travel tips", "beginner gardening guide",
                 "career development strategies", "cooking tutorials for beginners", "local events this weekend",
                 "science discoveries 2023", "environmental conservation efforts", "fitness trackers comparison",
-                "book recommendations for professionals", "artificial intelligence applications", 
+                "book recommendations for professionals", "artificial intelligence applications",
                 "mobile app development trends", "renewable energy innovations", "work from home tips",
                 "language learning resources", "personal finance management", "virtual reality technology",
                 "meditation techniques for stress relief", "car maintenance tips", "parenting advice for toddlers",
@@ -679,7 +685,7 @@
                 "history documentaries to watch", "space exploration updates", "video game reviews",
                 "job interview preparation tips", "DIY home improvement projects"
             ];
-            
+
             // DOM elements
             const searchCount = document.getElementById('searchCount');
             const searchDelay = document.getElementById('searchDelay');
@@ -704,7 +710,7 @@
             const windows = document.querySelectorAll('.window');
             const mousePointer = document.getElementById('mousePointer');
             const pointsValue = document.querySelector('.points-value');
-            
+
             // State variables
             let isRunning = false;
             let searchCounter = 0;
@@ -715,36 +721,36 @@
             let openedWindows = [];
             let nextTerm = "";
             let pointsEarned = 0;
-            
+
             // Initialize range values
             searchCountValue.textContent = searchCount.value;
             searchDelayValue.textContent = searchDelay.value;
             windowCloseTimeValue.textContent = windowCloseTime.value;
-            
+
             // Update range value displays
-            searchCount.addEventListener('input', function() {
+            searchCount.addEventListener('input', function () {
                 searchCountValue.textContent = this.value;
             });
-            
-            searchDelay.addEventListener('input', function() {
+
+            searchDelay.addEventListener('input', function () {
                 searchDelayValue.textContent = this.value;
             });
-            
-            windowCloseTime.addEventListener('input', function() {
+
+            windowCloseTime.addEventListener('input', function () {
                 windowCloseTimeValue.textContent = this.value;
             });
-            
+
             // Generate random search term that appears more natural
             function generateSearchTerm() {
                 const randomIndex = Math.floor(Math.random() * searchPhrases.length);
                 return searchPhrases[randomIndex];
             }
-            
+
             // Add log entry
             function addLogEntry(message, icon = "info-circle") {
                 const now = new Date();
                 const timestamp = `[${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}]`;
-                
+
                 const logEntry = document.createElement('div');
                 logEntry.className = 'log-entry';
                 logEntry.innerHTML = `
@@ -752,15 +758,15 @@
                     <span class="log-timestamp">${timestamp}</span>
                     <span>${message}</span>
                 `;
-                
+
                 logEntries.insertBefore(logEntry, logEntries.firstChild);
-                
+
                 // Limit to 15 log entries
                 if (logEntries.children.length > 15) {
                     logEntries.removeChild(logEntries.lastChild);
                 }
             }
-            
+
             // Update progress bar
             function updateProgress() {
                 const percent = totalSearchCount === 0 ? 0 : Math.round((completedSearchCount / totalSearchCount) * 100);
@@ -768,24 +774,24 @@
                 progressText.textContent = `${percent}%`;
                 progressPercent.textContent = `${percent}%`;
             }
-            
+
             // Calculate time remaining
             function calculateTimeRemaining() {
                 const remainingSearches = totalSearchCount - completedSearchCount;
                 const delay = parseInt(searchDelay.value);
                 const closeTime = parseInt(windowCloseTime.value);
-                
+
                 // Estimate time remaining (searches left * delay + close time for the last window)
                 const seconds = remainingSearches * delay + closeTime;
                 return seconds;
             }
-            
+
             // Update time remaining display
             function updateTimeRemaining() {
                 const seconds = calculateTimeRemaining();
                 timeRemaining.textContent = `${seconds}s`;
             }
-            
+
             // Animate windows
             function animateWindows() {
                 windows.forEach((window, index) => {
@@ -797,62 +803,62 @@
                     }, index * 300);
                 });
             }
-            
+
             // Simulate mouse movement
             function simulateMouseMovement() {
                 if (!isRunning) return;
-                
+
                 // Random position in the window
                 const x = Math.random() * window.innerWidth;
                 const y = Math.random() * window.innerHeight;
-                
+
                 // Show and move the pointer
                 mousePointer.style.opacity = '1';
                 mousePointer.style.transform = `translate(${x}px, ${y}px)`;
-                
+
                 // Hide after a moment
                 setTimeout(() => {
                     mousePointer.style.opacity = '0';
                 }, 1000);
-                
+
                 // Schedule next movement
                 const nextMove = 3000 + Math.random() * 5000;
                 setTimeout(simulateMouseMovement, nextMove);
             }
-            
+
             // Start the auto-search process
-            startBtn.addEventListener('click', function() {
+            startBtn.addEventListener('click', function () {
                 if (isRunning) return;
-                
+
                 isRunning = true;
                 searchCounter = 0;
                 completedSearchCount = 0;
                 totalSearchCount = parseInt(searchCount.value);
                 activeWindowCount = 0;
                 pointsEarned = 0;
-                
+
                 totalSearches.textContent = totalSearchCount;
                 completedSearches.textContent = '0';
                 activeWindows.textContent = '0';
                 logStatus.textContent = "Running";
                 logStatus.style.color = "#27ae60";
                 pointsValue.textContent = '0';
-                
+
                 addLogEntry("Starting Bing auto-search with enhanced algorithm", "play-circle");
                 addLogEntry("Simulating human behavior to earn points", "user");
                 updateProgress();
                 updateTimeRemaining();
-                
+
                 // Generate first search term
                 nextTerm = generateSearchTerm();
                 nextSearchTerm.textContent = nextTerm;
-                
+
                 // Start mouse simulation
                 simulateMouseMovement();
-                
+
                 startSearchCycle();
             });
-            
+
             // Start the search cycle with variable delays
             function startSearchCycle() {
                 if (!isRunning || searchCounter >= totalSearchCount) {
@@ -863,19 +869,19 @@
                     logStatus.style.color = "#27ae60";
                     return;
                 }
-                
+
                 searchCounter++;
                 activeWindowCount++;
                 activeWindows.textContent = activeWindowCount;
-                
+
                 // Generate Bing search URL
                 const term = encodeURIComponent(nextTerm);
                 const url = `https://www.bing.com/search?q=${term}&form=QBLH&sp=-1`;
-                
+
                 // Open new window
                 const newWindow = window.open(url, '_blank');
 
-                
+
                 if (!newWindow) {
                     addLogEntry("Failed to open new window. Please allow pop-ups for this site.", "exclamation-triangle");
                     activeWindowCount--;
@@ -885,21 +891,21 @@
                     logStatus.style.color = "#e74c3c";
                     return;
                 }
-                
+
                 openedWindows.push(newWindow);
                 addLogEntry(`Search #${searchCounter}: "${nextTerm}" in new window`, "window-maximize");
                 animateWindows();
-                
+
                 // Generate next search term
                 nextTerm = generateSearchTerm();
                 nextSearchTerm.textContent = nextTerm;
-                
+
                 // Schedule window closing with variable timing
                 const baseCloseTime = parseInt(windowCloseTime.value);
                 // Add randomness to close time (80% to 120% of base time)
                 const randomizedCloseTime = baseCloseTime * (0.8 + Math.random() * 0.4);
                 const closeTime = Math.max(20, randomizedCloseTime) * 1000;
-                
+
                 setTimeout(() => {
                     try {
                         newWindow.close();
@@ -908,14 +914,14 @@
                         completedSearches.textContent = completedSearchCount;
                         activeWindowCount--;
                         activeWindows.textContent = activeWindowCount;
-                        
+
                         // Award points (5 points per search)
                         pointsEarned += 5;
                         pointsValue.textContent = pointsEarned;
-                        
+
                         updateProgress();
                         updateTimeRemaining();
-                        
+
                         // Remove from opened windows array
                         const index = openedWindows.indexOf(newWindow);
                         if (index !== -1) {
@@ -925,28 +931,28 @@
                         addLogEntry(`Error closing window: ${e.message}`, "exclamation-circle");
                     }
                 }, closeTime);
-                
+
                 // Schedule next search with variable delay
                 const baseDelay = parseInt(searchDelay.value);
                 // Add randomness to delay (80% to 120% of base time)
                 const randomizedDelay = baseDelay * (0.8 + Math.random() * 0.4);
                 const delay = Math.max(15, randomizedDelay) * 1000;
-                
+
                 setTimeout(startSearchCycle, delay);
-                
+
                 addLogEntry(`Next search in ${Math.round(randomizedDelay)}s`, "clock");
                 updateTimeRemaining();
             }
-            
+
             // Stop the process
-            stopBtn.addEventListener('click', function() {
+            stopBtn.addEventListener('click', function () {
                 if (!isRunning) return;
-                
+
                 isRunning = false;
                 addLogEntry("Process stopped by user", "pause-circle");
                 logStatus.textContent = "Stopped";
                 logStatus.style.color = "#e74c3c";
-                
+
                 // Close all opened windows
                 openedWindows.forEach(win => {
                     try {
@@ -955,16 +961,16 @@
                         console.error("Error closing window:", e);
                     }
                 });
-                
+
                 openedWindows = [];
                 activeWindowCount = 0;
                 activeWindows.textContent = '0';
             });
-            
+
             // Reset everything
-            resetBtn.addEventListener('click', function() {
+            resetBtn.addEventListener('click', function () {
                 isRunning = false;
-                
+
                 // Close all opened windows
                 openedWindows.forEach(win => {
                     try {
@@ -973,16 +979,16 @@
                         console.error("Error closing window:", e);
                     }
                 });
-                
+
                 openedWindows = [];
-                
+
                 // Reset counters
                 searchCounter = 0;
                 completedSearchCount = 0;
                 totalSearchCount = 0;
                 activeWindowCount = 0;
                 pointsEarned = 0;
-                
+
                 // Reset displays
                 totalSearches.textContent = '0';
                 completedSearches.textContent = '0';
@@ -995,7 +1001,7 @@
                 logStatus.textContent = "System Ready";
                 logStatus.style.color = "#2c3e50";
                 pointsValue.textContent = '0';
-                
+
                 // Clear logs
                 logEntries.innerHTML = '';
                 addLogEntry("Reset complete. Ready to start new session", "redo");
@@ -1004,4 +1010,5 @@
         });
     </script>
 </body>
+
 </html>
